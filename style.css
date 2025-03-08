@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background: #ffcc00;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+button:hover {
+  background: #ffdd44;
+  transform: scale(1.1);
+}
+
+/* Game Table */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+th {
+  background: #12385e57;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+td {
+  background: #0055aa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+td:hover {
+  background: #0077dd;
+  transform: scale(1.1);
+}
+
+/* Active Clue Display */
+#active-clue {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#active-clue:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Spinner */
+#spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffcc00;
+  visibility: hidden;
+}
+
+#spinner.active {
+  visibility: visible;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* End Game Message */
+#end-message {
+  font-size: 2rem;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #ffcc00;
+}
